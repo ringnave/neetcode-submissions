@@ -1,0 +1,14 @@
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+        unordered_set<int> seen;
+        for(const auto& num : nums) {
+            if (seen.contains(num)) {
+                return true;
+            } else {
+                seen.insert(num);
+            }
+        }
+        return false;
+    }
+};
